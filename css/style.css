@@ -692,8 +692,33 @@ section.alt { background: var(--offwhite); }
   padding: 30px;
 }
 
-.whatsapp-inline-wrap {
+.whatsapp-inline-wrap,
+.map-cta-wrap {
   padding: 14px 0;
+}
+
+.map-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: var(--white);
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 10px 24px rgba(138, 105, 31, 0.28);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.map-cta span { font-size: 18px; }
+
+.map-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(138, 105, 31, 0.36);
 }
 
 .whatsapp-inline {
