@@ -293,7 +293,7 @@ section.alt { background: var(--offwhite); }
 
 .logo-text {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--charcoal);
