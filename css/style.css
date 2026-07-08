@@ -692,9 +692,18 @@ section.alt { background: var(--offwhite); }
   padding: 30px;
 }
 
-.whatsapp-inline-wrap,
-.map-cta-wrap {
+.whatsapp-inline-wrap {
   padding: 14px 0;
+}
+
+.contact-item.no-border {
+  border-bottom: none;
+  padding-bottom: 6px;
+}
+
+.map-cta-wrap {
+  padding: 6px 0 18px;
+  border-bottom: 1px solid var(--border);
 }
 
 .map-cta {
