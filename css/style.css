@@ -625,18 +625,6 @@ section.alt { background: var(--offwhite); }
 
 .gallery-item svg { width: 30px; height: 30px; }
 
-.gallery-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 22px 14px 12px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--white);
-  background: linear-gradient(0deg, rgba(20, 16, 10, 0.72) 0%, rgba(20, 16, 10, 0) 100%);
-}
-
 /* =========================================================
    İLETİŞİM
    ========================================================= */
