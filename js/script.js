@@ -63,4 +63,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Footer yılı
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Galeri lightbox
+  const galleryImgs = document.querySelectorAll('.gallery-item img');
+  if (galleryImgs.length) {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = '<button class="lightbox-close" aria-label="Kapat">&times;</button><img alt="">';
+    document.body.appendChild(lightbox);
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    const openLightbox = (img) => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || '';
+      lightbox.classList.add('open');
+      document.body.classList.add('no-scroll');
+    };
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    };
+
+    galleryImgs.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => openLightbox(img));
+    });
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
 });
