@@ -410,14 +410,16 @@ section.alt { background: var(--offwhite); }
 }
 
 .hero-photo-track img {
-  height: 210px;
-  width: 280px;
+  height: 260px;
+  width: 340px;
   object-fit: cover;
   border-radius: 18px;
   opacity: 0.5;
   filter: grayscale(20%) saturate(115%);
   flex-shrink: 0;
 }
+
+.hero-action-mobile-only { display: none; }
 
 @keyframes heroMarquee {
   from { transform: translateX(0); }
@@ -429,7 +431,8 @@ section.alt { background: var(--offwhite); }
 }
 
 @media (max-width: 768px) {
-  .hero-photo-track img { height: 130px; width: 180px; }
+  .hero-photo-track img { height: 160px; width: 220px; }
+  .hero-action-mobile-only { display: inline-flex; }
 }
 
 .hero-inner {
